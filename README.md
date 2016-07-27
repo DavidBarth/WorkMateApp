@@ -1,3 +1,12 @@
+This is a repository of a little side project for work and university.
+Although I'd like to work with C# and .NET or Java I've found it enabling to
+learn other languages and frameworks.
+
+This Rails project is to serve a better understanding of the MVC pattern and with the 
+same instance it's a small application to help day-to-day operation at my current work.
+
+
+
 
      ,-----.,--.                  ,--. ,---.   ,--.,------.  ,------.
     '  .--./|  | ,---. ,--.,--. ,-|  || o   \  |  ||  .-.  \ |  .---'
