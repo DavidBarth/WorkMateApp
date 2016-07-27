@@ -1,0 +1,55 @@
+<h1>Stock check sheet details</h1>
+
+    <p>Vending Machine ID: <%= @sheet.vendingmachine_id %></p>
+    
+    <%= form_for @sheet do |f| %>
+        <div>
+          <p>Item 1 : <%= @sheet.item1 %></p>
+          <%= f.label :On_screen %> 
+          <%= f.text_field :item11, placeholder: "enter qty" %>
+          <%= f.label :Physical %>
+          <%= f.text_field :item12, placeholder: "enter qty" %>
+        </div>
+---------------------------------------------------------------------------------------        
+        <div>
+          <p>Item 2 : <%= @sheet.item2 %></p>
+          <%= f.label :On_screen %> 
+          <%= f.text_field :item21, placeholder: "enter qty" %>
+          <%= f.label :Physical %>
+          <%= f.text_field :item22, placeholder: "enter qty" %>
+        </div>
+---------------------------------------------------------------------------------------
+        <div>
+          <p>Item 3 : <%= @sheet.item3 %></p>
+          <%= f.label :On_screen %> 
+          <%= f.text_field :item31, placeholder: "enter qty" %>
+          <%= f.label :Physical %>
+          <%= f.text_field :item32, placeholder: "enter qty" %>
+        </div>
+---------------------------------------------------------------------------------------
+        <div>
+          <p>Item 4 : <%= @sheet.item4 %></p>
+          <%= f.label :On_screen %> 
+          <%= f.text_field :item41, placeholder: "enter qty" %>
+          <%= f.label :Physical %>
+          <%= f.text_field :item42, placeholder: "enter qty" %>
+        </div>
+---------------------------------------------------------------------------------------
+        <div>
+          <p>Item 5 : <%= @sheet.item5 %></p>
+          <%= f.label :On_screen %> 
+          <%= f.text_field :item51, placeholder: "enter qty" %>
+          <%= f.label :Physical %>
+          <%= f.text_field :item52, placeholder: "enter qty" %>
+        </div>
+---------------------------------------------------------------------------------------
+
+        <div>
+          <!-- Asking confirmation from user for SFR -->
+          <%= f.submit :onclick =>"return confirm('Sure')", class: "btn btn-primary btn-lg" %>
+        </div>
+        
+      
+    <% end %>
+<p><%= link_to "Do another stock check" , vendingmachines_path(@machines) %></p>    
+<p><%= link_to "Home Page", root_path %></p>

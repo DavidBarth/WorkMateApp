@@ -1,0 +1,10 @@
+<h1>Broken tool collection records</h1>
+<%= link_to "Record new broken tool for collection", new_brokentoolreportsheet_path %>
+<p><%= link_to "Home", root_path %></p>
+<% @brokentoolreportsheets.each do |f| %>
+<h2><%= f.toolname %></h2>
+<p><%= f.toolfault %></p>
+<p><%= f.toollocation %></p>
+<% end %>
+<p><%= link_to "Record new broken tool for collection", new_brokentoolreportsheet_path %><p>
+<p><%= link_to "Home", root_path %></p>

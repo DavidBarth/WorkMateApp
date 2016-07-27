@@ -1,0 +1,8 @@
+<h1>All factories</h1>
+<% @factories.each do |f| %>
+<h2>Factory Name: <%= link_to f.name, factory_path(f) %></h2>
+<p>Factory ID: <%= f.id %></p>
+<p><%= f.address %></p>
+<% end %>
+
+<p><%= link_to "Home", root_path %></p>

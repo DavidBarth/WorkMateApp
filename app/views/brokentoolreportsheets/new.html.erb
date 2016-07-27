@@ -1,0 +1,32 @@
+<h1>Report new broken tool for collection</h1>
+<!-- this is a HTML file with embedded Ruby code to create a form to capture user input
+      I partitioned the form with 'divs'into three main parts to suit the UC1 SFR steps
+      and offered to cancel the process at for SFR6 step 3a-->
+<%= form_for @brokentoolreportsheet do |f| %>
+         <div>
+           <%= f.label :toolname %> 
+           <%= f.text_field :toolname, placeholder: "Name of tool", autofocus: true %>
+         </div>
+
+        <div>
+          <%= f.label :toolfault %>
+        </div>
+        <div>
+          <%= f.text_area :toolfault, rows:10, placeholder: "Description of fault" %>
+        </div>
+
+        <div>
+          <%= f.label :toollocation %>
+          <%= f.text_field :toollocation, placeholder: "Factory name" %>
+        </div>
+          
+        <div>
+          <!-- Asking confirmation from user for SFR6 step 3a -->
+          <%= f.submit :onclick =>"return confirm('Sure')", class: "btn btn-primary btn-lg" %>
+        </div>
+      
+    <% end %>
+    
+        <%= link_to "return to all tool faulty tool reports", brokentoolreportsheets_path %> 
+  
+

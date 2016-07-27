@@ -1,0 +1,48 @@
+<h1>Report new broken tool for collection</h1>
+
+<%= form_for @brokentoolreportsheet do |f| %>
+<div class="row">
+  <div class="col-xs-12">
+    <%= form_for(@brokentoolreportsheet, :html => {class: "form-horizontal", role: "form"}) do |f| %>
+      <div class="form-group">
+        <div class="control-label col-sm-2">
+          <%= f.label :toolname %> 
+        </div>
+        <div class="col-sm-8">
+          <%= f.text_field :toolname, class: "form-control", placeholder: "Name of tool", autofocus: true %>
+        </div>
+      </div>
+      
+      
+      <div class="form-group">
+        <div class="control-label col-sm-2">
+          <%= f.label :toolfault %>
+        </div>
+        <div class="col-sm-8">
+          <%= f.text_area :toolfault, rows:10, class: "form-control", placeholder: "Description of fault" %>
+        </div>
+      </div>
+      
+      <div class="form-group">
+        <div class="control-label col-sm-2">
+          <%= f.label :toollocation %>
+        </div>
+        <div class="col-sm-8">
+          <%= f.text_field :toollocation, class: "form-control", placeholder: "Factory name" %>
+        </div>
+      </div>
+      
+      <div class="form-group">
+        <div class="col-sm-offset-2 col-sm-10">
+          <%= f.submit :onclick =>"return confirm('Sure')", class: "btn btn-primary btn-lg" %>
+        </div>
+      </div>
+      
+    <% end %>
+    <div class="col-xs-4 col-xs-offset-4">
+       [ <%= link_to "Cancel request and return to all tool faulty tool reports", brokentoolreportsheets_path %> ]
+    </div>
+  </div>
+</div>
+
+<% end %>

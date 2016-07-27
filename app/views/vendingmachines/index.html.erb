@@ -1,0 +1,9 @@
+<h1>All Vendingmachines</h1>
+<% @vendingmachines.each do |f| %>
+<h2>Vending machine name: <%=link_to f.title, vendingmachine_path(f) %></h2>
+<p>Machine ID: <%= f.id %></p>
+<p>Factory ID: <%= f.factory_id %></p>
+<p>Vending macine configuration: <%= f.configuration %></p>
+-----------------------------------------------------------------------------
+
+<% end %>

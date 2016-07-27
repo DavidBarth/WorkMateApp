@@ -1,0 +1,19 @@
+<h1>Vendingmachine</h1>
+<p>Machine name: <%= @vendingmachine.title %></p>
+<p>Configuration: <%= @vendingmachine.configuration %></p>
+<p>Machine ID: <%= @vendingmachine.id %></p>
+
+<p>Select stock check sheet from list: </p>
+<% @stockchecksheets.each do |s| %>
+<ul>
+  <li><%= link_to s.id , stockchecksheet_path(s) %></li>
+</ul>
+<% end %>
+
+
+
+
+<p><%= link_to "Home screen", root_path %></p>
+<p><%= link_to "Add new vending machine", new_vendingmachine_path %> </p>
+<p><%= link_to "Record items for stock check", new_stockchecksheet_path %></p>
+
