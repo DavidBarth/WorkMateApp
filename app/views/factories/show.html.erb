@@ -7,7 +7,10 @@
 ----------------------------------------------------
 
 <% @factory.vendingmachines.each do |v| %>
-<p><%= link_to v.title , new_stockchecksheet_path(v) %></p>
+<p><%= link_to "Record new stock check" , new_stockchecksheet_path(v) %></p>
+
+<p><%= link_to "Record vending machine fault", new_faultsheet_path(v) %></p>
+
 <p>Machine ID: <%= v.id %></p>
 
 

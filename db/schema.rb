@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160722173904) do
+ActiveRecord::Schema.define(version: 20160727095854) do
 
   create_table "brokentoolreportsheets", force: :cascade do |t|
     t.string   "toolname"
@@ -25,6 +25,15 @@ ActiveRecord::Schema.define(version: 20160722173904) do
     t.string "name"
     t.text   "address"
   end
+
+  create_table "faultsheets", force: :cascade do |t|
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.text     "fault"
+    t.integer  "vendingmachine_id"
+  end
+
+  add_index "faultsheets", ["vendingmachine_id"], name: "index_faultsheets_on_vendingmachine_id"
 
   create_table "stockchecksheets", force: :cascade do |t|
     t.string  "item1"

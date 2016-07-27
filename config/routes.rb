@@ -14,6 +14,8 @@ Rails.application.routes.draw do
   
   resources :stockchecksheets
   
+  resources :faultsheets
+  
   resources :vendingmachines do
     resources :stockchecksheets
   end

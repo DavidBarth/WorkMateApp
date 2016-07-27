@@ -1,19 +1,26 @@
 <h1>workmateApp Homepage</h1>
+
 <div>
-    <%= link_to "Record new broken tool for collection", new_brokentoolreportsheet_path %> | 
-    <%= link_to "Display list of recorded broken tools", brokentoolreportsheets_path %>
+  <%= link_to "Record new broken tool for collection", new_brokentoolreportsheet_path %> | 
+  <%= link_to "Display list of recorded broken tools", brokentoolreportsheets_path %>
 </div> 
+
 <div>
-    <%= link_to "Add a new factory", new_factory_path %>
-</div>
-<div>
-    <%= link_to "Record new vending machine", factories_path %>
+  <%= link_to "Add a new factory", new_factory_path %>
 </div>
 
-<div class="">
-  <div>
-    <%= link_to "Create new stock check list", factories_path %> |
-    <%= link_to "View items for stock check for a vendingmachine", vendingmachines_path %>
-  </div>
+<div>
+  <%= link_to "Record new vending machine", factories_path %>
 </div>
+
+
+<div>
+  <%= link_to "Create new stock check list", factories_path %> |
+  <%= link_to "View items for stock check for a vendingmachine", vendingmachines_path %>
+</div>
+
+<div>
+  <%= link_to "Record vending machine fault", factories_path %>
+</div>
+
 

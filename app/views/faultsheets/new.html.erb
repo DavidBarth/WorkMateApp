@@ -1,0 +1,21 @@
+<h1>Record new fault sheet</h1>
+
+<%= form_for @faultsheet do |f| %>
+
+<div>
+  <%= f.label :Fault_noticed %>
+</div>
+<div>
+  <%= f.text_area :fault , rows: 10, placeholder: "Enter vending machine fault", autofocus: true %>
+</div>
+<div>
+  <%= f.label :Machine_ID %>
+</div>
+<div>
+  <%= f.text_field :vendingmachine_id, placeholder: "enter machine ID", autofocus: true %>
+</div>
+<div>
+  <!-- Asking confirmation from user for SFR6 step 3a -->
+  <%= f.submit :onclick =>"return confirm('Sure')", class: "btn btn-primary btn-lg" %>
+</div>
+<% end %>
