@@ -17,7 +17,7 @@ class FaultsheetsController < ActionController::Base
   
   private 
     def faultsheet_params
-      params.require(:faultsheet).permit(:fault)
+      params.require(:faultsheet).permit(:fault, :vendingmachine_id)
     end
 
 end
